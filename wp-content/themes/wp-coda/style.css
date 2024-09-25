@@ -1,0 +1,1110 @@
+/*
+Theme Name:CODA BLUE
+Theme URI:http://wordpress.bustatheme.com/coda-blue/
+Description:The Coda Slider inspired wordpress theme by <a href="http://greg-j.com/">Greg Johnson</a>.
+Version:1.0
+Author:Greg Johnson
+Author URI:http://greg-j.com/
+Tags:coda, jquery, slider, dark, fixed
+*/
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend caption{ margin:0; padding:0; border:0; outline:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit; vertical-align:baseline}
+:focus{outline:0}
+ol, ul{list-style:none}
+blockquote:before, blockquote:after, q:before, q:after{content:""}
+blockquote, q{quotes:"" ""}
+strong{font-weight:bold}
+em{font-style:normal}
+a{color: #4B76AA; text-decoration:none; cursor:pointer}
+
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	background:#070F33 url(images/sunprints_bg_repeat.jpg) center top repeat-x;
+	font-size:14px;
+	color: #333;
+}
+
+#header{
+	margin:0 auto;
+	padding:0;
+	width:1024px;
+	height:300px;
+	background:url(images/sunprints_header.png) center top no-repeat;
+	position:relative;
+}
+	#header h1,
+	#header h2{
+		display:none;
+	}
+	#header #header-nav {
+		color:#FFFFFF;
+		height:35px;
+		left:855px;
+		line-height:35px;
+		position:absolute;
+		width:150px;
+	}
+		#header #header-nav a {
+			color:#FFFFFF;
+		}	
+		#header #header-nav a:hover {
+			color:#FFFFFF;
+		}	
+/*	#header ul{
+		margin:0 auto;
+		height:41px;
+		width:987px;
+		padding-top:252px;
+	}
+		#header ul li{
+			display:block;
+			float:left;
+			width:141px;
+			height:41px;
+		}
+			#header ul li a{
+				display:block;
+				font-size:15px;
+				height:41px;
+				width:141px;
+				line-height:41px;
+				position:relative;
+				text-align:center;
+				color:#FFF;
+			}
+				#header ul li a strong{
+					display:none;
+				}
+				#header ul li .hover{
+					background-image:url(images/sunprints_menu_rollover.jpg);
+					background-repeat:no-repeat;
+					background-position: bottom center;
+					
+					
+					position:absolute;    
+					
+					/*  width, height, left and top to fill the whole LI item   
+					width:141px;      
+					height:41px;  
+					left:0;   
+					top:0;    
+					
+					/* display under the Anchor tag
+					z-index:0;        
+					
+					/* hide it by default   
+					display:none;
+				}*/
+				
+#navigation {  
+    margin:0 auto;   
+    padding:0;  
+    list-style:none;      
+    text-align:center;  
+    line-height:60px;  
+	
+	height:41px;
+	width:963px;
+	padding:252px 0 0 8px;
+}  
+  
+    #navigation li {  
+        float:left;   
+          
+        /* default background image */  
+        background: none;      
+          
+        /* width and height of the menu item */  
+		font-size:15px;
+		height:41px;
+		/*width:120px;*/
+               padding: 0 30px;
+          
+        /* simulate pixel perfect using border 
+        border-left:1px solid #111;               
+        border-right:1px solid #333;  
+        border-top:1px solid #555;  
+        border-bottom:1px solid #333;  */
+          
+        /* must set it as relative, because .hover class top and left with absolute position will be positioned according to li.    */  
+        position:relative;            
+    }  
+  
+    #navigation li a {  
+        /* z-index must be higher than .hover class */  
+        z-index:20;               
+          
+        /* display as block and set the height according to the height of the menu to make the whole LI clickable   */  
+        display:block;    
+        height:41px;  
+        position:relative;  
+        color:#FFF;  
+		line-height: 41px;
+    }  
+  
+    #navigation li .hover {  
+        /* mouseover image  */  
+        background:url(images/sunprints_menu_rollover.jpg) no-repeat bottom center;         
+  
+        /* must be postion absolute     */  
+        position:absolute;    
+          
+        /*  width, height, left and top to fill the whole LI item   */  
+		font-size:15px;
+		height:41px;
+		/*width:123px;*/
+		width: 100%;
+        left:0;   
+        top:0;    
+          
+        /* display under the Anchor tag */  
+        z-index:10;        
+          
+        /* hide it by default   */  
+        display:none;     
+    }     
+  
+    #navigation li.selected {  
+        /* selected image   */  
+        background:url(images/sunprints_menu_rollover.jpg) no-repeat bottom center;     
+    }  
+	
+	
+#page_header{
+	margin:0 auto;
+	width:900px;
+	height:110px;
+	background:url(images/page_header.png) center top no-repeat;
+}
+	#page_header p{
+		display:none;
+	}
+
+#page{
+    width:1024px;
+    margin:-7px auto 0;
+	z-index: 50;
+	position: relative;
+	
+}
+	#page-inner{
+		background-color:#FFFFFF;
+		margin:0 auto;
+		position:relative;
+		width:950px;
+		border-radius-bottomleft: 5px;
+		border-bottom-right-radius: 5px;
+		-moz-border-radius-bottomleft: 5px;
+		-moz-border-radius-bottomright: 5px;
+		-webkit-border-bottom-left-radius: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		overflow:auto;
+	}
+	
+	#page-inner p{
+		font-size: 13px;
+		line-height: 18px;
+		color: #666666;
+	}
+
+	
+#entry{
+	overflow: hidden;
+}
+
+#footer {
+	border-top:1px solid #272F4D;
+	font-family:"Lucida Grande",Calibri,Arial;
+	font-size:13px;
+	height:20px;
+	margin:auto;
+	padding:10px 0;
+	width:950px;
+}
+	#footer p {
+		color:#374051;
+		margin:0 auto;
+		overflow:hidden;
+		width:950px;
+	}
+		#footer span {
+			color:#72788B;
+			display:block;
+			height:20px;
+			line-height:20px;
+		}
+		#footer .left{
+			float:left;
+		}
+		#footer .right{
+			float:right;
+		}
+		#footer a{
+			color:#727fa1;
+		}
+			#footer a:hover{
+				text-decoration:underline;
+			}
+
+
+div#fancy_overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:90;
+	width:100%;
+	background-color:#333;
+}
+
+div#fancy_loading{
+	position:absolute;
+	height:40px;
+	width:40px;
+	cursor:pointer;
+	display:none;
+	overflow:hidden;
+	background:transparent;
+	z-index:100;
+}
+
+div#fancy_loading div{
+	position:absolute;
+	top:0;
+	left:0;
+	width:40px;
+	height:480px;
+	background:transparent url(images/fancy_progress.png) no-repeat;
+}
+
+div#fancy_close{
+	position:absolute;
+	top:-12px;
+	left:-12px;
+	height:30px;
+	width:30px;
+	background:transparent url(images/fancy_closebox.png) ;
+	cursor:pointer;
+	z-index:100;
+	display:none;
+}
+
+div#fancy_content{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	padding:0; 
+	margin:0;
+	z-index:96;
+}
+
+#fancy_frame{
+	position:relative;
+	width:100%;
+	height:100%;
+	display:none;
+}
+
+img#fancy_img{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	border:0; 
+	padding:0; 
+	margin:0;
+	z-index:92;
+	cursor:pointer;
+}
+
+div#fancy_title{
+	position:absolute;
+	bottom:-35px;
+	left:0;
+	width:100%;
+	z-index:100;
+	display:none;
+}
+
+div#fancy_title table{
+	margin:0 auto;
+}
+
+div#fancy_title div{
+	color:#FFF;
+	font:bold 12px Arial;
+	padding-bottom:2px;
+}
+
+td#fancy_title_left{
+	height:32px;
+	width:15px;
+	background:transparent url(images/fancy_title_left.png) repeat-x;
+}
+
+td#fancy_title_main{
+	height:32px;
+	background:transparent url(images/fancy_title_main.png) repeat-x;
+}
+
+td#fancy_title_right{
+	height:32px;
+	width:15px;
+	background:transparent url(images/fancy_title_right.png) repeat-x;
+}
+
+div#fancy_outer{
+	position:absolute;
+    top:0;
+    left:0;
+    z-index:90;
+    padding:18px 18px 58px 18px;
+    margin:0;
+    overflow:hidden;
+    background:transparent;
+    display:none;
+}
+
+div#fancy_inner{
+	position:relative;
+	width:100%;
+	height:100%;
+	border:1px solid #fff;
+	background:#fff;
+}
+
+a#fancy_left, a#fancy_right{
+	position:absolute; 
+	bottom:10px; 
+	height:100%; 
+	width:35%; 
+	cursor:pointer;
+	background-image:url(images/data_image/gif%3bbase64%2cAAAA.html);
+	z-index:100; 
+}
+
+a#fancy_left{
+	left:0px; 
+}
+
+a#fancy_right{
+	right:0px; 
+}
+
+a#fancy_left:hover{
+	background:transparent url(images/fancy_left.gif) no-repeat 0% 100%;
+}
+
+a#fancy_right:hover{
+	background:transparent url(images/fancy_right.gif) no-repeat 100% 100%;
+}
+
+#fancy_bigIframe, #fancy_freeIframe{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:10;
+}
+
+div#fancy_bg{
+	display:none;
+}
+	
+div.fancy_bg{
+	position:absolute;
+	display:block;
+	z-index:70;
+}
+
+div.fancy_bg_n{
+	top:-18px;
+	width:100%;
+	height:18px;
+	background:transparent url(images/fancy_shadow_n.png) repeat-x;
+}
+
+div.fancy_bg_ne{
+	top:-18px;
+	right:-13px;
+	width:13px;
+	height:18px;
+	background:transparent url(images/fancy_shadow_ne.png) no-repeat;
+}
+
+div.fancy_bg_e{
+	right:-13px;
+	height:100%;
+	width:13px;
+	background:transparent url(images/fancy_shadow_e.png) repeat-y;
+}
+
+div.fancy_bg_se{
+	bottom:-18px;
+	right:-13px;
+	width:13px;
+	height:18px;
+	background:transparent url(images/fancy_shadow_se.png) no-repeat;
+}
+
+div.fancy_bg_s{
+	bottom:-18px;
+	width:100%;
+	height:18px;
+	background:transparent url(images/fancy_shadow_s.png) repeat-x;
+}
+
+div.fancy_bg_sw{
+	bottom:-18px;
+	left:-13px;
+	width:13px;
+	height:18px;
+	background:transparent url(images/fancy_shadow_sw.png) no-repeat;
+}
+
+div.fancy_bg_w{
+	left:-13px;
+	height:100%;
+	width:13px;
+	background:transparent url(images/fancy_shadow_w.png) repeat-y;
+}
+
+div.fancy_bg_nw{
+	top:-18px;
+	left:-13px;
+	width:13px;
+	height:18px;
+	background:transparent url(images/fancy_shadow_nw.png) no-repeat;
+}
+
+
+/*** CUSTOM LHS STYLES ***/
+
+h1 {
+	color:#4B76AA;
+	font-family:Georgia,"Times New Roman",Times,serif;
+	font-size:40px;
+}
+
+h2 {
+	font-size:24px;
+	color:#4B76AA;
+	font-family:Georgia,"Times New Roman",Times,serif;
+}
+
+h3 {
+	color:#4B76AA;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:18px;
+	margin-bottom:5px;
+}
+
+h4{
+	color:#333333;
+	font-size:16px;
+	margin-bottom:5px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:10px;
+}
+
+div.content-sidebar {
+	color:#666666;
+	float:right;
+	font-size:13px;
+	margin-right:20px;
+	padding-left:10px;
+	width:168px;
+}
+
+div.content-sidebar h3{
+	color:#333333;
+	margin-top:10px;
+}
+
+div.content-sidebar ul ul {
+	border-top:1px solid #999999;
+	color:#333333;
+	font-size:14px;
+	margin-top:5px;
+}
+
+div.content-sidebar ul ul li {
+	background-color:#F1F1F1;
+	font-size:14px;
+	height:30px;
+	line-height:30px;
+	margin:3px 0;
+	padding-left:10px;
+}
+
+div.content-main {
+	float:left;
+        margin-bottom:20px;
+        margin-right:10px;
+        padding-right:20px;
+}
+
+div.content-main-sidebar {
+	border-right:1px solid #999999;
+	float:left;
+	margin-bottom:20px;
+	margin-right:10px;
+	padding-left:20px;
+	padding-right:20px;
+	width:700px;
+}
+
+div.content-blog-sidebar {
+	border-right:1px solid #999999;
+	float:left;
+	margin-bottom:20px;
+	margin-right:10px;
+	padding-left:20px;
+	padding-right:20px;
+	width:700px;
+}
+
+div.content-header {
+	background-repeat:no-repeat;
+	border-bottom:15px solid #0098EE;
+	color:#666666;
+	font-size:13px;
+	margin-bottom:20px;
+	min-height:188px;
+	padding:37px 20px 20px 320px;
+}
+
+div.content-header h2 {
+	margin-bottom:5px;
+	margin-top:15px;
+}
+
+
+div#about-header {
+	background-image: url(images/sunprints_about_header_bg.jpg);
+	background-position: 15px 0;
+}
+
+div#products-header {
+	background-image: url(images/sunprints_products_header_bg.jpg);
+	min-height: 233px;
+	padding-left: 450px;
+}
+
+div#howitworks-header {
+	background-image: url(images/sunprints_about_header_bg.jpg);
+	background-position: 15px 0;
+}
+
+div#activities-header {
+	background-image: url(images/sunprints_activities_header_bg.jpg);
+	background-position: 15px 0;
+}
+
+div#gallery-header {
+	background-image: url(images/sunprints_gallery_header_bg.jpg);
+	background-position: 15px 0;
+}
+
+div#contactus-header {
+	background-image: url(images/sunprints_contact_header_bg.jpg);
+	background-position: 15px 0;
+}
+
+div#reseller-header {
+	background-image: url(images/sunprints_reseller_header_bg.jpg);
+	background-position: 15px 0;
+}
+
+
+div#blog-header {
+	background-image: url(images/header_blog.jpg);
+	background-position: 15px 0;
+	padding: 35px 20px 0 450px;
+}
+
+
+
+div.sunprints-mode {
+	float:left;
+	clear:left;
+	padding: 10px 0;
+}
+
+div.sunprints-mode img {
+	float: left;
+	padding-right: 10px;
+}
+
+div.sunprints-mode p {
+	font-size: 14px;
+	color: #333;
+}
+
+div.gallery_buttons {
+	border-bottom:1px solid #999999;
+	border-top:1px solid #999999;
+	color:#666666;
+	font-size:15px;
+	margin:15px 0;
+	padding:10px;
+}
+div.gallery_buttons p{
+	font-size:15px;
+	width:400px;
+}
+
+
+div.gallery_button_links {
+	float: right;	
+}
+
+div.gallery_button_links img {
+	display: inline;
+	margin: 5px;
+}
+
+
+ul#socialnetworks li{
+	display: block;
+	background-color: #F1F1F1;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	padding-left: 30px;
+	background-repeat:no-repeat;
+	height:30px;
+	line-height:30px;
+	margin:3px 0;
+}
+ul#socialnetworks li.facebook {
+	background-image:url(images/sunprints_socialnetworks_facebook_icon.jpg);
+	background-position:5px 8px;
+}
+ul#socialnetworks li.flickr {
+	background-position:5px 8px;
+	background-image:url(images/sunprints_socialnetworks_flickr_icon.jpg);
+}
+ul#socialnetworks li.twitter {
+	background-position:5px 8px;
+	background-image:url(images/sunprints_socialnetworks_twitter_icon.jpg);
+}
+
+#footer ul#socialnetworks li.facebook, 
+#footer ul#socialnetworks li.flickr,
+#footer ul#socialnetworks li.twitter {
+	background-position:5px 5px;	
+}
+
+/**  HOME PAGE STYLES - CHRIS **/
+
+#home-bottom {
+	background-image:url(images/sunprints_home_home_bottom.png);
+	background-repeat:no-repeat;
+	border-bottom:1px solid #000000;
+	margin: auto;
+	overflow:hidden;
+	padding-bottom:20px;
+	padding-top:40px;
+	width:950px;
+}
+#home-bottom h3 {
+	font-family: arial;
+	font-size: 24px;
+	color: #5b92ce;
+	font-weight: normal;
+}
+#home-bottom p {
+	font-family: arial;
+	font-size: 16px;
+	color: #72788b;
+	margin-top: 5px;
+}
+div.home-bottom-images {
+	width: 215px;
+	float: left;
+	margin-left: 5px;
+}
+#bottom-wrapper {
+	overflow:hidden;
+	padding-top:30px;
+	width:950px;
+}
+.homebottom {
+	border: 3px solid #fff;
+	margin-bottom: 5px;
+}
+.home-art {
+	background-repeat: no-repeat;
+	width: 1024px;
+	height: 326px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+.home-art img {  
+    width:  1024px; 
+    height: 326px; 
+    top:  0; 
+    left: 0 
+}
+
+
+#home_btn {
+	width: 280px;
+	position: absolute;
+	margin-left: 650px;
+	margin-top: 145px;
+	z-index: 50;
+}
+#home_btn a {
+	color: #fff;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-left: 10px;
+	line-height: 53px;
+	background-image: url(images/sunprints_home_home_button.png);
+	background-repeat: no-repeat;
+	height: 53px;
+	width: 280px;
+	display: block;
+	background-size: 106% 202%;
+}
+#home_btn a:hover {
+	background-position: 0 -53px;
+}
+
+/** END HOME PAGE STYLES **/
+
+/** STYLES FOR ACTIVITIES PAGE **/
+
+div#activities-science, div#activities-art {
+	margin: 0 auto;
+	clear: left;
+	padding: 20px 0;
+}
+
+div.activities {
+		background-color:#E7E7E7;
+	float:left;
+	margin:5px;
+	padding:15px;
+	width:191px;
+}
+div.activites img{
+	margin-bottom:10px;
+}
+div.activites h3{	
+	color:#333333;
+	font-family:arial;
+	font-size:16px;
+}
+
+div.activities p {
+	padding-bottom:10px;
+}
+
+div.activities img.downloadpdf {
+	float:right;
+	padding-top:10px;
+
+}
+
+/** END STYLES FOR ACTIVITIES PAGE **/
+
+/**STYLES FOR PRODUCT PAGE**/
+div#kit-wrapper{
+	padding: 0 20px;
+}
+div#kit-wrapper img{
+	margin-bottom:20px;
+}
+
+div.kit-type{
+	float:left;
+	padding: 0 30px;
+	width:246px;	
+}
+div.kit-type-middle{
+	float: left;
+	padding:  0 20px;
+	width:  246px;
+}
+div.kit-type img{
+	margin-bottom: 5px;
+}
+.kitbutton{
+	margin-top: 10px;
+}
+div.products-purchase-blue-bar{
+	background-color:#0098EE;
+	color:#FFFFFF;
+	float:left;
+	font-size:18px;
+	line-height:30px;
+	margin-top:30px;
+	padding-left:20px;
+	width:930px;
+}
+div.products-purchase-wrapper{
+	border-top-color:#fff;
+	border-top-style:solid;
+	border-top-width:1px;
+	float:left;
+	padding-bottom:20px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:20px;
+	width:910px;
+	background: url(images/kit-bg.jpg) repeat-x top;
+}
+div.products-purchase a{
+        color: #fff;
+}
+
+div.product-kit{
+	width: 173px;
+	float: left;
+	
+}
+div.product-super{
+	width: 188px;
+	float: left;
+}
+div.kit-copy{
+	padding: 0 10px;
+	text-align: center;
+}
+div.kit-copy h3{
+	font-size: 16px;
+	color: #333;
+	margin-bottom: 10px;
+}
+div.kit-buynow{
+	background-image: url(images/kit-buynow.png);
+	background-repeat: no-repeat;
+	height: 36px;
+	width: 161px;
+	display: block;
+	margin-top: 20px;
+	margin-right: 6px;
+	margin-left: 6px;
+	font-size: 14px;
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-left: 8px;
+	line-height: 36px;
+	
+}
+
+/* Cathy added this code to fix the missing button links. 7.10.2019 */
+div.kit-buynow a{
+	height: 36px;
+	width: 161px;
+	display: block;
+}
+
+div.super-buynow{
+	background-image: url(images/kit-buynow.png);
+	background-repeat: no-repeat;
+	height: 36px;
+	width: 161px;
+	display: block;
+	margin-top: 20px;
+	margin-right:13px;
+	margin-left: 13px;
+	font-size: 14px;
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-left: 8px;
+	line-height: 36px;
+	
+}
+
+/* Cathy added this code to fix the missing button links. 7.10.2019 */
+div.super-buynow a{
+	height: 36px;
+	width: 161px;
+	display: block;
+}
+
+div.super-contactus{
+	background-image: url(images/contactus_btn.png);
+	background-repeat: no-repeat;
+	height: 36px;
+	width: 161px;
+	display: block;
+	margin-top: 20px;
+	margin-right:13px;
+	margin-left: 13px;
+	font-size: 14px;
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-left: 8px;
+	line-height: 36px;
+	
+}
+
+/**HOW IT WORKS PAGE STYLES**/
+
+
+span.howitworks-page-link{
+	background-color:#F0F0F0;
+	border: 1px solid #CCC;
+	display:block;
+	float:left;
+	font-size:18px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	width:30px;
+	margin-right: 5px;
+        cursor: pointer;
+}
+
+span.howitworks-page-link.howitworks-page-active{
+	background-color: #0098EE;
+	color: #fff;
+}
+
+div.howitworks-pagination{
+	margin-bottom:10px;
+	margin-top:5px;
+	overflow:hidden;	
+}
+div.howitworks-steps{
+	margin-top: 10px;
+}
+
+div.howitworks-steps img.downloadpdf{
+	float:left;
+	margin-right:10px;
+	margin-top:10px;
+}
+
+p.submit-p input {
+	background-image: url(images/sunprints_contact_send_message.jpg);
+	width:123px;
+	height:30px;
+	border:none;
+	margin-top:10px;
+}
+
+div.wpcf7 p {
+	padding: 5px 0;
+}
+
+input.wpcf7-submit {
+  font-size: 0;
+}
+
+div#blog-content {
+	/*padding: 20px;	*/
+}
+
+div.post {
+	border-bottom:1px dashed #CCCCCC;
+        clear:both;
+        overflow:hidden;
+        padding-top:10px;
+}
+
+div.content-blog-sidebar img {
+       padding: 20px 30px;
+}
+
+.alignright {
+	float: right;
+	}
+
+.alignleft {
+	float: left;
+	}
+div.post {
+	padding-bottom: 10px;
+}
+div#respond textarea {
+	width: 620px;
+}
+
+div.postimage {
+        border:1px solid #CCCCCC;
+        float:left;
+        height:150px;
+        margin:10px 20px 10px 0;
+        overflow:hidden;
+        padding:7px;
+        width:150px;
+}
+div.postimage img {
+	padding: 0;
+}
+
+div.kit-copy p {
+	height: 30px;	
+}
+
+div.howitworks-steps p {
+	margin: 10px 0;	
+}
+
+div.howitworks-step ul {
+	list-style-type: inherit;
+	list-style-position:inside;
+	list-style-image:inherit;
+}
+
+.readmore{
+        background-color:#4B76AA;
+        color:#FFFFFF;
+        float:left;
+        margin-right:5px;
+        padding:3px 5px;
+        font-size: 13px;
+}
+
+.comments{
+        font-size:13px;
+        line-height:23px;
+}
+
+.meta{
+        margin: 5px 0;
+}
+
+div.content-sidebar li{
+padding: 3px 5px; 
+background-color: #ccc; 
+margin-bottom: 3px;
+}
+div.home{
+padding: 0px;
+border: 0px;
+}
+
+sub {
+vertical-align: sub;
+font-size: smaller;
+}
+sup {
+vertical-align: super;
+font-size: smaller;
+}
+
+.content-blog-sidebar p {
+margin: 15px 0;
+}
+
+.content-blog-sidebar ul {
+list-style-type: disc;
+margin-left:1.5em;
+font-size: 13px;
+line-height: 18px;
+color: #666666;
+}
