@@ -6,13 +6,13 @@
 	<service>
 		<engineName>WordPress</engineName>
 		<engineLink>https://wordpress.org/</engineLink>
-		<homePageLink>https://www.sunprints.org</homePageLink>
+		<homePageLink>https://sunprints.org</homePageLink>
 		<apis>
-			<api name="WordPress" blogID="1" preferred="true" apiLink="https://www.sunprints.org/xmlrpc.php" />
-			<api name="Movable Type" blogID="1" preferred="false" apiLink="https://www.sunprints.org/xmlrpc.php" />
-			<api name="MetaWeblog" blogID="1" preferred="false" apiLink="https://www.sunprints.org/xmlrpc.php" />
-			<api name="Blogger" blogID="1" preferred="false" apiLink="https://www.sunprints.org/xmlrpc.php" />
-				<api name="WP-API" blogID="1" preferred="false" apiLink="https://www.sunprints.org/wp-json/" />
+			<api name="WordPress" blogID="1" preferred="true" apiLink="https://sunprints.org/xmlrpc.php" />
+			<api name="Movable Type" blogID="1" preferred="false" apiLink="https://sunprints.org/xmlrpc.php" />
+			<api name="MetaWeblog" blogID="1" preferred="false" apiLink="https://sunprints.org/xmlrpc.php" />
+			<api name="Blogger" blogID="1" preferred="false" apiLink="https://sunprints.org/xmlrpc.php" />
+				<api name="WP-API" blogID="1" preferred="false" apiLink="https://sunprints.org/wp-json/" />
 			</apis>
 	</service>
 </rsd>
